@@ -1,0 +1,160 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <!--Header-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        >
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:layout_centerVertical="true"
+               android:text="Pre order"/>
+
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_delete"
+            android:paddingRight="10dp"
+            android:onClick="closeAlert"
+            android:layout_marginRight="10dp" />
+
+        <!--<Button-->
+            <!--android:id="@+id/alert_close_btn"-->
+            <!--android:layout_width="24dp"-->
+            <!--android:layout_height="24dp"-->
+            <!--android:background="@drawable/ic_delete"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--/>-->
+
+
+    </RelativeLayout>
+
+    <!--Content-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_commodity_photo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/hannibal" />
+
+
+                <ImageButton
+                    android:id="@+id/remove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="invisible"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_commodity_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Meja Laptop Portable"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="12dp"
+                    android:paddingLeft="10dp"
+                    android:layout_alignTop="@+id/iv_commodity_photo"
+                    android:layout_toEndOf="@+id/iv_commodity_photo" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 15.000"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="20dp"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@+id/tv_commodity_name"
+                    android:layout_toEndOf="@+id/iv_commodity_photo" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/jumlah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jumlah"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="Tes"
+                android:imeOptions="actionUnspecified"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/nego"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nego"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="Tes"
+                android:imeOptions="actionUnspecified"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/btn_add_to_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:background="@color/colorAccent"
+                android:onClick="addToCartBtn"
+                android:text="Tambah ke Keranjang"
+                android:textColor="@color/colorPrimaryText" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
